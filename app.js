@@ -23,12 +23,15 @@ var app = {
             // hide Exit button. Browser does not exit.
             document.getElementById('exitApp').classList.add("hidden");
         } else {
-            app.showIt('content', AppVersion.version);            
+            app.pluginTest();
         }
         app.showIt('info', 'deviceready done.');
     },
     showIt : function (id, msg) {
         document.getElementById(id).innerHTML = msg;
+    },
+    pluginTest : function() {
+        app.showIt('content', AppVersion.version);    
     }
 };
 //
